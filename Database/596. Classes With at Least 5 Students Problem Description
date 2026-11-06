@@ -1,0 +1,35 @@
+# LeetCode SQL – 596. Classes With at Least 5 Students
+
+## Problem Description
+Write a solution to find all classes that have at least **5 students** enrolled.
+
+## Explanation
+
+1. **SELECT class:** Retrieves the class names from the Courses table.
+2. **FROM Courses:** Specifies the table from which data is selected.
+3. **GROUP BY class:** Groups students according to their respective classes.
+4. **HAVING COUNT(student) >= 5:** Filters the grouped classes and returns only those containing at least 5 students.
+
+## SQL Concepts Used
+- SELECT
+- FROM
+- GROUP BY
+- HAVING
+- COUNT()
+
+## Expected Behavior
+The query returns only those classes where the number of enrolled students is greater than or equal to 5.
+
+## Key Learning
+- `GROUP BY` is used to group rows with the same values.
+- `COUNT()` counts the number of students in each group.
+- `HAVING` filters grouped results based on aggregate conditions.
+
+## Complexity Analysis
+- **Time Complexity:** O(n), approximately, where n is the number of rows.
+- **Space Complexity:** Depends on the database execution plan and grouping strategy.
+
+## Platform
+[LeetCode](https://leetcode.com/problems/classes-more-than-5-students/)
+
+**Topic:** SQL – GROUP BY and HAVING
