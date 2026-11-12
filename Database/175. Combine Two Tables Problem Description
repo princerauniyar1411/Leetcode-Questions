@@ -1,0 +1,46 @@
+# SQL Solution – Combine Two Tables (LeetCode 175)
+
+## Problem Description
+Write a SQL query to report the first name, last name, city, and state of each person in the `Person` table. If a person does not have an address, display `NULL` for the city and state.
+
+## Concepts Used
+- **LEFT JOIN:** Returns all records from the left table (`Person`) and matching records from the right table (`Address`).
+- **ON Clause:** Specifies the condition used to match records between two tables.
+- **Table Aliases:** `p` represents `Person`, and `a` represents `Address`.
+
+## Expected Behaviour
+- Returns all persons from the `Person` table.
+- Displays matching city and state information from the `Address` table.
+- If a person has no matching address, `NULL` is returned for city and state.
+
+## Example
+
+**Person Table**
+
+| personId | firstName | lastName |
+|---|---|---|
+| 1 | Wang | Allen |
+| 2 | Alice | Bob |
+
+**Address Table**
+
+| personId | city | state |
+|---|---|---|
+| 2 | New York City | New York |
+| 3 | Los Angeles | California |
+
+**Output**
+
+| firstName | lastName | city | state |
+|---|---|---|---|
+| Wang | Allen | NULL | NULL |
+| Alice | Bob | New York City | New York |
+
+## Key Takeaway
+This problem demonstrates how to use `LEFT JOIN` to combine two tables while preserving all records from the left table, even when matching records do not exist in the right table.
+
+## Difficulty
+Easy
+
+## Platform
+LeetCode – Problem 175
