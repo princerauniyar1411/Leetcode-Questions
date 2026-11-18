@@ -1,0 +1,35 @@
+# Employees Earning More Than Their Managers
+
+## Problem Description
+Write a SQL query to find the names of employees who earn more than their direct managers.
+
+The `Employee` table contains employee details, including:
+- `id`: Unique ID of each employee.
+- `name`: Name of the employee.
+- `salary`: Salary of the employee.
+- `managerId`: ID of the employee's manager.
+
+## Approach
+
+1. **Self Join:** Use the `Employee` table twice with different aliases (`e` and `m`).
+2. **Join Condition:** Match each employee's `managerId` with their manager's `id`.
+3. **Salary Comparison:** Use the `WHERE` clause to compare employee salaries with their managers' salaries.
+4. **Result:** Return the names of employees earning more than their managers.
+
+## SQL Concepts Used
+- INNER JOIN
+- SELF JOIN
+- Table Aliases
+- WHERE Clause
+- Comparison Operator (`>`)
+
+## Complexity Analysis
+- **Time Complexity:** O(n) on average with an indexed employee ID and manager ID.
+- **Space Complexity:** Depends on the database execution plan and join implementation.
+
+## Key Learning
+This problem demonstrates how to use a **SELF JOIN** to compare records within the same table and identify employees whose salaries are higher than their managers' salaries.
+
+---
+**Platform:** LeetCode  
+**Topic:** SQL / Database Management System (DBMS)
