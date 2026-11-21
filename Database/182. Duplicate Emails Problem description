@@ -1,0 +1,126 @@
+Duplicate Emails – SQL Solution
+
+📌 Project Overview
+This project demonstrates how to identify duplicate email addresses in a database using SQL.
+
+The solution uses the GROUP BY and HAVING clauses along with the COUNT() aggregate function to find email addresses that appear more than once.
+
+🎯 Problem Statement
+
+Write an SQL query to report all duplicate email addresses from a table named Person. Each email address is non-null.
+
+📊 Database Structure
+
+Table: Person
+
+Column Name
+
+Data Type
+
+id
+
+INT
+
+email
+
+VARCHAR
+
+id is the primary key.
+
+email contains the email addresses of individuals.
+📊 Database Structure
+
+Table: Person
+
+Column Name
+
+Data Type
+
+id
+
+INT
+
+email
+
+VARCHAR
+
+id is the primary key.
+
+email contains the email addresses of individuals.
+📥 Sample Input
+
+id
+
+email
+
+1
+
+a@b.com
+
+2
+
+c@d.com
+
+3
+
+a@b.com
+
+📤 Expected Output
+
+email
+
+a@b.com
+
+Explanation: The email a@b.com appears twice in the table, so it is identified as a duplicate.
+🔍 Query Explanation
+
+1. SELECT email
+
+Retrieves the email addresses from the Person table.
+
+2. FROM Person
+
+Specifies the table from which data is retrieved.
+
+3. GROUP BY email
+
+Groups records containing identical email addresses.
+
+4. HAVING COUNT(email) > 1
+
+Filters the grouped records and returns only email addresses that appear more than once.
+
+🧠 SQL Concepts Used
+
+SELECT: Retrieves data from a database.
+
+GROUP BY: Groups rows with identical values.
+
+COUNT(): Counts the number of values.
+
+HAVING: Filters grouped records based on aggregate conditions.
+
+Duplicate Detection: Identifies repeated values in a dataset.
+
+⚙️ Technologies Used
+
+SQL
+
+MySQL
+
+Database Management System (DBMS)
+
+🚀 Learning Outcomes
+
+Through this problem, I learned how to:
+
+Identify duplicate records in a database.
+
+Use aggregate functions in SQL.
+
+Apply GROUP BY for data grouping.
+
+Filter grouped results using HAVING.
+
+Write simple and efficient SQL queries for data analysis.
+
